@@ -13,13 +13,15 @@ import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
 
 import './components/CheckMatrix';
+import { HelloComponent } from './hello.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    HeroComponent
+    HeroComponent,
+    HelloComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +64,7 @@ import './components/CheckMatrix';
     {provide: FormioAuthConfig, useValue: AuthConfig},
     {provide: FormioAppConfig, useValue: AppConfig}
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [HelloComponent]
 })
 export class AppModule { }
